@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Om Kumar - Projects</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Custom Google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <!-- Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <style>
+        /* Custom Styles */
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .card {
+            border-radius: 0.5rem;
+        }
+
+        /* Adjust iframe */
+        iframe {
+            width: 100%; /* Make iframe responsive */
+            height: 500px; /* Set a fixed height for better layout */
+            display: none; /* Hide iframe by default */
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 576px) {
+            .card-body {
+                padding: 2rem; /* Add more padding for small devices */
+            }
+
+            /* Hide preview button and iframe on small screens */
+            .preview-button,
+            .project-iframe {
+                display: none; /* Hide these elements */
+            }
+        }
+    </style>
+</head>
+
+<body class="d-flex flex-column h-100 bg-light">
+    <main class="flex-shrink-0">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+            <div class="container px-5">
+                <a class="navbar-brand" href="index.html"><span class="fw-bolder text-primary">Start Bootstrap</span></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
+                        <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Projects Section-->
+        <section class="py-5">
+            <div class="container px-5 mb-5">
+                <div class="text-center mb-5">
+                    <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline">Projects</span></h1>
+                    <p class="text-muted mt-2">Preview available in desktop mode.</p> <!-- Added Info Text -->
+                </div>
+                <div class="row gx-5 justify-content-center">
+                    <div class="col-lg-11 col-xl-9 col-xxl-8">
+                        <!-- Project Card 1: Campscape -->
+                        <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
+                            <div class="card-body p-0">
+                                <div class="d-flex flex-column flex-md-row align-items-center">
+                                    <div class="p-5 flex-fill">
+                                        <h2 class="display-5 fw-bolder"><span class="text-gradient d-inline">Campscape</span></h2>
+                                        <p class="lead fw-light mb-4">A full-stack web app for discovering, reviewing, and adding campgrounds.</p>
+                                        <h4 class="mt-4 fw-bolder">Skills Used:</h4>
+                                        <ul class="text-start mb-4">
+                                            <li><strong>HTML, CSS, Bootstrap</strong></li>
+                                            <li><strong>JavaScript</strong></li>
+                                            <li><strong>Node.js & Express.js</strong></li>
+                                            <li><strong>MongoDB</strong></li>
+                                            <li><strong>Passport.js</strong></li>
+                                            <li><strong>Map Integration</strong></li>
+                                        </ul>
+                                        <a class="btn btn-outline-dark btn-sm" href="https://github.com/yourgithub/campscape" target="_blank">View on GitHub</a>
+                                        <a class="btn btn-primary btn-sm ms-2" href="https://campscape.vercel.app" target="_blank">Visit Website</a>
+                                        <button class="btn btn-secondary btn-sm ms-2 preview-button" onclick="togglePreview('iframeCampscape')">Preview</button>
+                                        <iframe id="iframeCampscape" src="https://campscape.vercel.app" title="Campscape Project" class="mt-5 project-iframe"></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project Card 2: Konnectus -->
+                        <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
+                            <div class="card-body p-0">
+                                <div class="d-flex flex-column flex-md-row align-items-center">
+                                    <div class="p-5 flex-fill">
+                                        <h2 class="display-5 fw-bolder"><span class="text-gradient d-inline">Konnectus</span></h2>
+                                        <p class="lead fw-light mb-4">A full-stack alumni association platform with dynamic features for staff, alumni, and students.</p>
+                                        <h4 class="mt-4 fw-bolder">Skills Used:</h4>
+                                        <ul class="text-start mb-4">
+                                            <li><strong>HTML, CSS, Bootstrap</strong></li>
+                                            <li><strong>JavaScript</strong></li>
+                                            <li><strong>Node.js & Express.js</strong></li>
+                                            <li><strong>MongoDB</strong></li>
+                                            <li><strong>Cloudinary</strong></li>
+                                            <li><strong>Passport.js</strong></li>
+                                            <li><strong>Joi Schema Validation</strong></li>
+                                        </ul>
+                                        <a class="btn btn-outline-dark btn-sm" href="https://github.com/yourgithub/konnectus" target="_blank">View on GitHub</a>
+                                        <a class="btn btn-primary btn-sm ms-2" href="https://konnectus.vercel.app" target="_blank">Visit Website</a>
+                                        <button class="btn btn-secondary btn-sm ms-2 preview-button" onclick="togglePreview('iframeKonnectus')">Preview</button>
+                                        <iframe id="iframeKonnectus" src="https://konnectus.vercel.app" title="Konnectus Project" class="mt-5 project-iframe"></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project Card 3: sKite -->
+                        <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
+                            <div class="card-body p-0">
+                                <div class="d-flex flex-column flex-md-row align-items-center">
+                                    <div class="p-5 flex-fill">
+                                        <h2 class="display-5 fw-bolder"><span class="text-gradient d-inline">sKite</span></h2>
+                                        <p class="lead fw-light mb-4">A blog posting app where users can create, read, update, and delete posts.</p>
+                                        <h4 class="mt-4 fw-bolder">Skills Used:</h4>
+                                        <ul class="text-start mb-4">
+                                            <li><strong>HTML, CSS, Bootstrap</strong></li>
+                                            <li><strong>JavaScript</strong></li>
+                                            <li><strong>Node.js & Express.js</strong></li>
+                                            <li><strong>MongoDB</strong></li>
+                                            <li><strong>Cloudinary</strong></li>
+                                            <li><strong>Quill</strong></li>
+                                            <li><strong>Passport.js</strong></li>
+                                            <li><strong>Joi Schema Validation</strong></li>
+                                        </ul>
+                                        <a class="btn btn-outline-dark btn-sm" href="https://github.com/yourgithub/skite" target="_blank">View on GitHub</a>
+                                        <a class="btn btn-primary btn-sm ms-2" href="https://skite.vercel.app" target="_blank">Visit Website</a>
+                                        <button class="btn btn-secondary btn-sm ms-2 preview-button" onclick="togglePreview('iframeSkite')">Preview</button>
+                                        <iframe id="iframeSkite" src="https://skite.vercel.app" title="sKite Project" class="mt-5 project-iframe"></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to action section-->
+        <section class="py-5 bg-gradient-primary-to-secondary text-white">
+            <div class="container px-5 my-5">
+                <div class="text-center">
+                    <h2 class="display-4 fw-bolder mb-4">View my Resume</h2>
+                    <a class="btn btn-outline-light btn-lg px-5 py-3 fs-6 fw-bolder" href="contact.html">Resume</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer-->
+    <footer class="bg-white py-4 mt-auto">
+        <div class="container px-5">
+            <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+                <div class="col-auto">
+                    <div class="small m-0">Copyright &copy; Om Kumar 2024</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+
+    <!-- Custom JavaScript for Preview -->
+    <script>
+        function togglePreview(iframeId) {
+            const iframe = document.getElementById(iframeId);
+            if (iframe.style.display === "none" || iframe.style.display === "") {
+                iframe.style.display = "block"; // Show the iframe
+            } else {
+                iframe.style.display = "none"; // Hide the iframe
+            }
+        }
+    </script>
+</body>
+
+</html>
