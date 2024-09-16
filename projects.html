@@ -36,7 +36,7 @@
         }
 
         /* Responsive adjustments */
-        @media (max-width: 576px) {
+        @media (max-width: 768px) {
             .card-body {
                 padding: 2rem; /* Add more padding for small devices */
             }
@@ -45,6 +45,19 @@
             .preview-button,
             .project-iframe {
                 display: none; /* Hide these elements */
+            }
+
+            /*Show the preview info*/
+            .preview-info {
+                display: block !important;
+            }
+
+        }
+
+        /* Larger screens (md and above) */
+        @media (min-width: 769px) {
+            .preview-info {
+                display: none !important;
             }
         }
     </style>
@@ -75,7 +88,7 @@
             <div class="container px-5 mb-5">
                 <div class="text-center mb-5">
                     <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline">Projects</span></h1>
-                    <p class="text-muted mt-2">Preview available in desktop mode.</p> <!-- Added Info Text -->
+                    <p class="text-muted mt-2 preview-info">Preview available in desktop mode.</p> <!-- Added Info Text -->
                 </div>
                 <div class="row gx-5 justify-content-center">
                     <div class="col-lg-11 col-xl-9 col-xxl-8">
@@ -95,9 +108,11 @@
                                             <li><strong>Passport.js</strong></li>
                                             <li><strong>Map Integration</strong></li>
                                         </ul>
-                                        <a class="btn btn-outline-dark btn-sm" href="https://github.com/RaidenOM/campscape" target="_blank">View on GitHub</a>
-                                        <a class="btn btn-primary btn-sm ms-2" href="https://campscape.vercel.app" target="_blank">Visit Website</a>
-                                        <button class="btn btn-secondary btn-sm ms-2 preview-button" onclick="togglePreview('iframeCampscape')">Preview</button>
+                                        <div class="d-flex flex-md-row flex-column flex-wrap justify-content-start">
+                                            <a class="btn btn-outline-dark btn-sm mb-2 me-md-2" href="https://github.com/RaidenOM/campscape" target="_blank">View on GitHub</a>
+                                            <a class="btn btn-primary btn-sm mb-2 me-md-2" href="https://campscape.vercel.app" target="_blank">Visit Website</a>
+                                            <button class="btn btn-secondary btn-sm mb-2 preview-button" onclick="togglePreview('iframeCampscape')">Preview</button>
+                                        </div>
                                         <iframe id="iframeCampscape" src="https://campscape.vercel.app" title="Campscape Project" class="mt-5 project-iframe"></iframe>
                                     </div>
                                 </div>
@@ -121,9 +136,11 @@
                                             <li><strong>Passport.js</strong></li>
                                             <li><strong>Joi Schema Validation</strong></li>
                                         </ul>
-                                        <a class="btn btn-outline-dark btn-sm" href="https://github.com/RaidenOM/konnectus" target="_blank">View on GitHub</a>
-                                        <a class="btn btn-primary btn-sm ms-2" href="https://konnectus.vercel.app" target="_blank">Visit Website</a>
-                                        <button class="btn btn-secondary btn-sm ms-2 preview-button" onclick="togglePreview('iframeKonnectus')">Preview</button>
+                                        <div class="d-flex flex-md-row flex-column flex-wrap justify-content-start">
+                                            <a class="btn btn-outline-dark btn-sm mb-2 me-md-2" href="https://github.com/RaidenOM/campscape" target="_blank">View on GitHub</a>
+                                            <a class="btn btn-primary btn-sm mb-2 me-md-2" href="https://campscape.vercel.app" target="_blank">Visit Website</a>
+                                            <button class="btn btn-secondary btn-sm mb-2 preview-button" onclick="togglePreview('iframeCampscape')">Preview</button>
+                                        </div>
                                         <iframe id="iframeKonnectus" src="https://konnectus.vercel.app" title="Konnectus Project" class="mt-5 project-iframe"></iframe>
                                     </div>
                                 </div>
@@ -148,9 +165,11 @@
                                             <li><strong>Passport.js</strong></li>
                                             <li><strong>Joi Schema Validation</strong></li>
                                         </ul>
-                                        <a class="btn btn-outline-dark btn-sm" href="https://github.com/RaidenOM/skite" target="_blank">View on GitHub</a>
-                                        <a class="btn btn-primary btn-sm ms-2" href="https://skite.vercel.app" target="_blank">Visit Website</a>
-                                        <button class="btn btn-secondary btn-sm ms-2 preview-button" onclick="togglePreview('iframeSkite')">Preview</button>
+                                        <div class="d-flex flex-md-row flex-column flex-wrap justify-content-start">
+                                            <a class="btn btn-outline-dark btn-sm mb-2 me-md-2" href="https://github.com/RaidenOM/campscape" target="_blank">View on GitHub</a>
+                                            <a class="btn btn-primary btn-sm mb-2 me-md-2" href="https://campscape.vercel.app" target="_blank">Visit Website</a>
+                                            <button class="btn btn-secondary btn-sm mb-2 preview-button" onclick="togglePreview('iframeCampscape')">Preview</button>
+                                        </div>
                                         <iframe id="iframeSkite" src="https://skite.vercel.app" title="sKite Project" class="mt-5 project-iframe"></iframe>
                                     </div>
                                 </div>
@@ -191,11 +210,13 @@
     <!-- Custom JavaScript for Preview -->
     <script>
         function togglePreview(iframeId) {
-            const iframe = document.getElementById(iframeId);
-            if (iframe.style.display === "none" || iframe.style.display === "") {
-                iframe.style.display = "block"; // Show the iframe
-            } else {
-                iframe.style.display = "none"; // Hide the iframe
+            if(window.innerWidth >= 769) {
+                const iframe = document.getElementById(iframeId);
+                if (iframe.style.display === "none" || iframe.style.display === "") {
+                    iframe.style.display = "block"; // Show the iframe
+                } else {
+                    iframe.style.display = "none"; // Hide the iframe
+                }
             }
         }
     </script>
